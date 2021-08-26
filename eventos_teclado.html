@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<script>
+			function acao1() {
+				alert('evento disparado')
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<input onkeydown="acao1()" type="text"> <!--assim que a tecla é pressionada, o evento é disparado. O caracter só será exibido depois que o evento ocorrer. Funciona com qualquer tecla-->
+
+		<input onkeyup="acao1()" type="text"> <!--assim que solta a tecla, o evento é disparado. O caracter é exibido antes do evento ocorrer-->
+
+		<input onkeypress="acao1()" type="text"> <!--enquanto a tecla é pressionada, o evento é disparado. O caracter só será exibido depois que o evento ocorrer. A diferença do onkeydown é que o onkeypress só funciona para teclas de caracteres. Em teclas como control e shift, por exemplo não funciona-->
+	</body>
+</html>

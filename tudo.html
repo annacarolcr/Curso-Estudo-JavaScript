@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<script>
+			/*Desafio abc:
+
+			var a = 10
+			var b = 20
+			var c = null
+
+			document.write('A: ' + a + '<br/>')
+			document.write('B: ' + b + '<br/>')
+			document.write('C: ' + c + '<br/>')
+
+			document.write('<hr/>')
+
+			c = a
+			a = b
+			b = c
+			c = null
+
+
+
+			document.write('A: ' + a + '<br/>')
+			document.write('B: ' + b + '<br/>')
+			document.write('C: ' + c + '<br/>')
+
+			-------------------------------------*/
+			/*if / else / parseInt() / parseFloat() / toString() / operadores lógicos: && || ! / Operador ternário*/
+			/*alert('Olá, seja bem-vindo! Veja aqui o seu resultado final. Boa sorte!')
+			
+			var nota1 = prompt('Digite a nota da primeira prova: ')
+			var nota2 = prompt('Digite a nota da segunda prova: ')
+			var faltas = prompt('Digite a quantidade de faltas que você teve no período: ')
+			
+
+			nota1 = parseInt(nota1)
+			nota2 = parseInt(nota2)
+			faltas = parseInt(faltas)
+
+			var media_aluno = (nota1 + nota2)/2
+
+			var media_periodo = 6
+			var faltas_maximas = 15
+
+
+			if (media_aluno >= media_periodo && faltas <= faltas_maximas) {
+
+				document.write('Sua nota final é: ' + media_aluno + '. <br/> Parabéns você passou para o próximo período!')
+			}
+			else{
+
+				document.write('Sua nota final é: ' + media_aluno + '. <br/> Poxa, não foi dessa vez! Não se preocupe, período que vem tem mais.')
+			}
+
+			//teste toString()
+			//document.write(nota1.toString() + nota2.toString())
+
+			//Operador ternário
+			//var variavel = <condicao> ? <verdadeiro> : <falso>
+			/*document.write('<br/>')
+			var resultado = (media_aluno >= media_periodo && faltas <= faltas_maximas) ? 'Aprovado' : 'Reprovado'
+			document.write(resultado)
+
+			---------------------------------------------------------*/
+
+			//Atividade
+
+
+			/*var idade = prompt('Digite sua idade: ')
+
+			idade = parseInt(idade)
+
+			if (idade >= 0 && idade < 15){
+				alert('Criança')
+			}
+			if (idade >= 15 && idade < 30){
+				alert('Jovem')
+			}
+			if (idade >= 30 && idade < 60){
+				alert('Adulto')
+			}
+			if (idade >= 60){
+				alert('Idoso')
+			}
+			---------------------------------------------------------*/
+
+			//Switch:
+
+			/*switch (parâmetro) {
+
+				case 1: 
+					[trecho de código que será executado]
+					break
+
+				case 2:
+					[trecho de código que será executado]
+					break
+
+				default:
+					[se o parametro não for encontrado]
+					break
+			}*/
+
+			/*------------------------------------------
+				          Cálculo IMC
+
+			var nome = prompt('Digite o seu nome: ')
+			var altura = prompt('Digite sua altura (em cm): ')
+			var peso = prompt('Digite o seu peso: ')
+
+			altura = parseFloat(altura)
+			peso = parseFloat(peso)
+
+			altura = altura/100
+
+			var imc = peso/(altura*altura)
+
+			var classificacao = ''
+
+			if (imc < 16) {
+				classificacao = 'Baixo peso muito grave'
+			}
+
+			else if (imc >= 16 && imc <= 16.99) {
+				classificacao = 'Baixo peso grave'
+			}
+
+			else if (imc >= 17 && imc <= 18.49) {
+				classificacao = 'Baixo peso'
+			}
+
+			else if (imc >= 18.50 && imc <= 24.99) {
+				classificacao = 'Peso normal'
+			}
+
+			else if (imc >= 25 && imc <= 29.99) {
+				classificacao = 'Sobrepeso'
+			}
+
+			else if (imc >= 30 && imc <= 34.99) {
+				classificacao = 'Obesidade grau I'
+			}
+
+			else if (imc >= 35 && imc <= 39.99) {
+				classificacao = 'Obesidade grau II'
+			}
+
+			else {
+				classificacao = 'Obesidade grau III'
+			}
+
+			document.write(nome + ' possui índice de massa corporal igual a ' + (imc.toFixed(2)) + ', sendo classificado como: ' + classificacao + '.')
+
+			----------------------------------------*/
+
+			//Funções
+
+			/*function calcularArea (largura, comprimento) {
+				var area = largura * comprimento
+
+				return area
+			}
+
+			var largura = prompt('Digite a largura: ')
+			var comprimento = prompt('Digite o comprimento: ')
+
+			var area = calcularArea (largura, comprimento)
+
+			document.write('O terreno possui ' + area + ' metros quadrados')*/
+
+			//-------------------------------------
+
+			//Função anônima (declara uma variável que recebe uma função (wrapper))
+
+			/*var exibirSaudacao = function(nome){
+				document.write('Olá ' + nome + ', tudo bem?')
+			}
+
+			exibirSaudacao ('Jorge')*/
+
+			//-------------------------------------
+
+			//Funções de callback
+			
+			/*function exibirArtigo (id, callbackSucesso, callbackErro){
+				if (true){
+					callbackSucesso('Funções de callback em JS', 'Funções de callback são muito utilizadas...')
+				}else{
+					callbackErro('Erro aos recuperar os dados')
+				}
+			}
+
+			var callbackSucesso = function(titulo, descricao){
+				document.write('<h1>' + titulo + '</h1>')
+				document.write('<hr/>')
+				document.write('<p>' + descricao + '</p>')
+			}
+
+			var callbackErro = function(erro){
+				document.write('<p><b>Erro: </b>' + erro + '</p>')
+
+			}
+			exibirArtigo(1, callbackSucesso, callbackErro)*/
+
+
+			//Funções nativas para manipular datas
+
+			//var data = new Date()
+
+			//document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear() '<br/>')
+			
+			//Adicionar ou remover dias (ex: contagem regressiva ou progressiva de dias):
+
+			/*document.write(data.toString())
+			data.setDate(data.getDate() + 20) //+ ou -
+			document.write('<hr/>')
+			document.write(data.toString())
+			document.write('<br/><br/><hr/>')
+
+			//Adicionar ou remover meses:
+
+			document.write(data.toString())
+			data.setMonth(data.getMonth() + 1) //+ ou -
+			document.write('<hr/>')
+			document.write(data.toString())
+			document.write('<br/><br/><hr/>')
+
+			//Adicionar ou remover anos:
+
+			document.write(data.toString())
+			data.setFullYear(data.getFullYear() + 1) //+ ou -
+			document.write('<hr/>')
+			document.write(data.toString())
+			document.write('<br/><br/><hr/>')*/
+
+			// 15/01/2021
+			/*var data1 = new Date(2021, 0, 15)
+
+			// 17/05/2021
+			var data2 = new Date(2021, 4, 17)
+
+			/*document.write(data1.toString())
+			document.write('<hr/>')
+			document.write(data2.toString())
+
+			document.write('<br/><br/><hr/>')*/
+
+			//Converter datas para algo que possamos calcular
+			
+			/*document.write(data1.getTime()) //+ ou -
+			document.write('<hr/>')
+			document.write(data2.getTime())
+			//desde 1 de janeiro de 1970
+
+			//encontrar a qtd de milissegundos entre data1 e data2
+			var milissegundos_entre_datas = Math.abs((data1.getTime() - data2.getTime())
+			document.write(milissegundos_entre_datas)
+
+			//1 dia tem 24 horas, 1 hora tem 60 minutos, 1 minuto tem 60 segundos, 1 segundo tem 1000 milissegundos
+			//quantos milissegundos existem em um dia??
+
+			var milissegundos_por_dia = (1*24*60*60*1000)
+			document.write('1 dia tem: ' + milissegundos_por_dia + 'milissegundos')
+			document.write('<br/><br/><hr/>')
+			document.write(Math.ceil('A diferença entre data1 e data2 é de ' + milissegundos_entre_datas / milissegundos_por_dia) + 'dias'))*/
+
+			/* Atividade
+
+			var num1 = prompt('Digite o primeiro número: ')
+			var operacao = prompt('Digite a operação que deseja realizar (soma, subtração, multiplicação ou divisão): ')
+			var num2 = prompt('Digite o segundo número: ')
+
+
+			function calculadora (num1, num2, operacao){
+				num1 = parseFloat(num1)
+				num2 = parseFloat(num2)
+
+				var resultado = 0
+
+				if(operacao == 'soma' || operacao == 'SOMA' || operacao == 'Soma'){
+					resultado = num1 + num2
+				}
+				if(operacao == 'subtracao' || operacao == 'SUBTRACAO' || operacao == 'Subtracao'|| operacao == 'Subtração'|| operacao == 'SUBTRAÇÃO'|| operacao == 'subtração'){
+					resultado = num1 - num2
+				}
+				if(operacao == 'multiplicacao' || operacao == 'MULTIPLICACAO' || operacao == 'Multiplicacao'|| operacao == 'Multiplicação'|| operacao == 'MULTIPLICAÇÃO'|| operacao == 'multiplicação'){
+					resultado = num1 * num2
+				}
+				if(operacao == 'divisao' || operacao == 'DIVISAO' || operacao == 'Divisao'|| operacao == 'Divisão'|| operacao == 'DIVISÃO'|| operacao == 'divisão*'){
+					resultado = num1 / num2
+				}
+
+
+				return resultado
+			}
+
+			document.write('O resultado é: ' + calculadora (num1, num2, operacao) + '.')*/
+
+			//------------------------------- EVENTOS -------------------------------
+
+			
+
+
+
+		</script>
+		
+	</head>
+
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<script>
+			function acao() {
+				alert('evento disparado')
+			}
+
+			function acao1() {
+				alert('elemento foi clicado')
+			}
+
+			function acao2(){
+				alert('O cursor do mouse deixou a região do elemento')
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<div onclick="acao()" style="background: #ccc; height: 150px; width: 150px"></div> <!--evento é disparado quando ocorre o click-->
+		<div ondblclick="acao()" style="background: #ccc; height: 150px; width: 150px"></div> <!--evento é disparado quando ocorre dois clicks-->
+		<div onmouseup="acao()" style="background: #ccc; height: 150px; width: 150px"></div> <!--evento é disparado quando solta o click-->
+		<div onmouseover="acao()" style="background: #ccc; height: 150px; width: 150px"></div> <!--evento é disparado quando o cursor fica em cima do elemento-->
+		<div onmouseout="acao()" style="background: #ccc; height: 150px; width: 150px"></div> <!--evento é disparado quando o cursor sai de cima do elemento-->
+		<!-- esses eventos podem ser combinados, tendo um mesmo evento no mesmo elemento exemplo:-->
+		<div onclick="acao1()" onmouseout="acao2()" style="background: #ccc; height: 150px; width: 150px"></div>
+
+		<!--existem elementos html que não suportam eventos, sempre consultar a documentação-->
+	</body>
+</html>

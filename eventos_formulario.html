@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+		<script>
+			function acao1() {
+				console.log('Recebeu o foco')
+			}
+
+			function acao2() {
+				console.log('Perdeu o foco')
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<input onfocus="acao1()" type="text"><!--o evento acontece quando o elemento ganha o foco do cursor por meio de um click no elemento-->
+		<input onblur="acao2()" type="text"><!--o evento acontece quando o elemento perde o foco, clicando fora do elemento-->
+
+		<select onchange="console.log('Estado foi modificado')"> <!--evento acontece quando o estado do elemento é modificado-->
+			<option>--Selecione--</option>
+			<option value="1">--Primeira opção--</option>
+			<option value="2">--Segunda opção--</option>
+		</select>
+	</body>
+</html>
